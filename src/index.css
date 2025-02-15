@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Custom styles */
+@theme {
+  /* ... */
+  --color-bg-secondary: "F5F5F5";
+}
