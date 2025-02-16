@@ -1,5 +1,5 @@
 import React from 'react';
-import { navbarData } from '../../Data/Navbar';
+import { navbarData } from '../../Data/main';
 import { CiSearch } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
