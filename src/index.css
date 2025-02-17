@@ -3,5 +3,6 @@
 /* Custom styles */
 @theme {
   /* ... */
-  --color-bg-secondary: "F5F5F5";
+  --color-bg-secondary: "#F5F5F5";
+  --color-btn-secondary: "#DB4444";
 }

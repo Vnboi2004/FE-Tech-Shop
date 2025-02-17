@@ -14,6 +14,7 @@ const App = () => {
     <div className='overflow-x-hidden'>
       <Navbar/>
       <Home currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+      
     </div>
   )
 }

@@ -72,5 +72,6 @@ export const advertisementData: Advertisement[] = [
     { id: 1, title: "iPhone 14 Series", discount: "Up to 10% off Voucher" },
     { id: 2, title: "iPhone 15 Series", discount: "Up to 12% off Voucher" },
     { id: 3, title: "MacBook Air", discount: "Save up to $200" },
-    { id: 4, title: "Apple Watch", discount: "Get 15% off" }
+    { id: 4, title: "Apple Watch", discount: "Get 15% off" },
+    { id: 5, title: "AirPods Max", discount: "Get 25% off" },
 ];
