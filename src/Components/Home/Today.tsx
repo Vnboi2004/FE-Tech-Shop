@@ -142,7 +142,7 @@ const Today: React.FC<TodayProductProps> = ({prevRef, nextRef}) => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                    <div className='flex justify-center py-12'>
+                    <div className='flex justify-center py-10'>
                         <button className='bg-[#DB4444] text-white px-12 py-3 rounded-sm cursor-pointer'>
                             View All Products
                         </button>

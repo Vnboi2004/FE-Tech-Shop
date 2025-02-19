@@ -10,10 +10,8 @@ import LogoApple from '../../assets/Images/logo_Apple.png';
 import { homeProps } from './Home';
 
 
-interface TitleProductsProps extends homeProps {
 
-}
-
+interface TitleProductsProps extends Pick<homeProps, "currentPage" | "setCurrentPage"> {};
 
 
 const TitleProducts: React.FC<TitleProductsProps> = ({currentPage, setCurrentPage}) => {

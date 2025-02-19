@@ -1,5 +1,6 @@
-import { Advertisement, navbarTypes, productTodays, titleProducts } from "../Types/main";
-import imageData from "./imageData";
+import { RiComputerLine } from 'react-icons/ri';
+import { Advertisement, Categories, navbarTypes, productTodays, titleProducts } from "../Types/main";
+import {Images, CategoriesIcon} from "./imageData";
 
 // Link Navbar
 export const navbarData: navbarTypes[] = [
@@ -87,7 +88,7 @@ export const productTodayData: productTodays[] = [
         star: 5,
         quantityStar: 88,
         discount: "-40%",
-        imgae:  imageData.product01_today,
+        imgae:  Images.product01_today,
         alt: "",
     },
     {
@@ -98,7 +99,7 @@ export const productTodayData: productTodays[] = [
         star: 4,
         quantityStar: 75,
         discount: "-35%",
-        imgae:  imageData.product02_today,
+        imgae:  Images.product02_today,
         alt: "",
     },
     {
@@ -109,7 +110,7 @@ export const productTodayData: productTodays[] = [
         star: 5,
         quantityStar: 99,
         discount: "-40%",
-        imgae: imageData.product03_today,
+        imgae: Images.product03_today,
         alt: "",
     },
     {
@@ -120,7 +121,7 @@ export const productTodayData: productTodays[] = [
         star: 5,
         quantityStar: 88,
         discount: "-40%",
-        imgae: imageData.product04_today,
+        imgae: Images.product04_today,
         alt: "",
     },
     {
@@ -131,7 +132,7 @@ export const productTodayData: productTodays[] = [
         star: 5,
         quantityStar: 88,
         discount: "-40%",
-        imgae: imageData.product05_today,
+        imgae: Images.product05_today,
         alt: "",
     },
     {
@@ -142,7 +143,7 @@ export const productTodayData: productTodays[] = [
         star: 5,
         quantityStar: 88,
         discount: "-40%",
-        imgae: imageData.product06_today,
+        imgae: Images.product06_today,
         alt: "",
     },
     {
@@ -153,8 +154,28 @@ export const productTodayData: productTodays[] = [
         star: 5,
         quantityStar: 88,
         discount: "-40%",
-        imgae: imageData.product07_today,
+        imgae: Images.product07_today,
         alt: "",
     },
 
+];
+
+
+export const categoriesData: Categories[] = [
+    { id: 1, icon: CategoriesIcon.IoPhonePortraitOutline, name: "Phones" },
+    {id: 2, icon: CategoriesIcon.RiComputerLine, name: "Computers" },
+    { id: 3, icon: CategoriesIcon.BsSmartwatch, name: "SmartWatch" },
+    { id: 4, icon: CategoriesIcon.CiCamera, name: "Camera" },
+    { id: 5, icon: CategoriesIcon.IoHeadsetOutline, name: "HeadPhones" },
+    { id: 7, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 8, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 10, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 11, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 12, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 13, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 14, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 15, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 16, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 17, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
+    { id: 18, icon: CategoriesIcon.IoGameControllerOutline, name: "Gaming" },
 ];

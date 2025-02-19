@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface navbarTypes {
     id: number;
     title: string;
@@ -25,4 +27,10 @@ export interface productTodays {
     discount: string;
     imgae: string;
     alt: string;
+};
+
+export interface Categories {
+    id: number;
+    icon: IconType;
+    name: string;
 };
