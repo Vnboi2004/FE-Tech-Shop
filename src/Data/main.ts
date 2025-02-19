@@ -1,4 +1,5 @@
-import { Advertisement, navbarTypes, titleProducts } from "../Types/main";
+import { Advertisement, navbarTypes, productTodays, titleProducts } from "../Types/main";
+import imageData from "./imageData";
 
 // Link Navbar
 export const navbarData: navbarTypes[] = [
@@ -74,4 +75,86 @@ export const advertisementData: Advertisement[] = [
     { id: 3, title: "MacBook Air", discount: "Save up to $200" },
     { id: 4, title: "Apple Watch", discount: "Get 15% off" },
     { id: 5, title: "AirPods Max", discount: "Get 25% off" },
+];
+
+
+export const productTodayData: productTodays[] = [
+    {
+        id: 1, 
+        nameProduct: "HAVIT HV-G92 Gamepad",
+        priceProduct: "$120",
+        originalPrice: "$160",
+        star: 5,
+        quantityStar: 88,
+        discount: "-40%",
+        imgae:  imageData.product01_today,
+        alt: "",
+    },
+    {
+        id: 2, 
+        nameProduct: "AK-900 Wired Keyboard",
+        priceProduct: "$960",
+        originalPrice: "$1160",
+        star: 4,
+        quantityStar: 75,
+        discount: "-35%",
+        imgae:  imageData.product02_today,
+        alt: "",
+    },
+    {
+        id: 3, 
+        nameProduct: "IPS LCD Gaming Monitor",
+        priceProduct: "$370",
+        originalPrice: "$400",
+        star: 5,
+        quantityStar: 99,
+        discount: "-40%",
+        imgae: imageData.product03_today,
+        alt: "",
+    },
+    {
+        id: 4, 
+        nameProduct: "HAVIT HV-G92 Gamepad",
+        priceProduct: "$120",
+        originalPrice: "$160",
+        star: 5,
+        quantityStar: 88,
+        discount: "-40%",
+        imgae: imageData.product04_today,
+        alt: "",
+    },
+    {
+        id: 5, 
+        nameProduct: "HAVIT HV-G92 Gamepad",
+        priceProduct: "$120",
+        originalPrice: "$160",
+        star: 5,
+        quantityStar: 88,
+        discount: "-40%",
+        imgae: imageData.product05_today,
+        alt: "",
+    },
+    {
+        id: 6, 
+        nameProduct: "HAVIT HV-G92 Gamepad",
+        priceProduct: "$120",
+        originalPrice: "$160",
+        star: 5,
+        quantityStar: 88,
+        discount: "-40%",
+        imgae: imageData.product06_today,
+        alt: "",
+    },
+    {
+        id: 7, 
+        nameProduct: "HAVIT HV-G92 Gamepad",
+        priceProduct: "$120",
+        originalPrice: "$160",
+        star: 5,
+        quantityStar: 88,
+        discount: "-40%",
+        imgae: imageData.product07_today,
+        alt: "",
+    },
+
 ];

@@ -14,3 +14,15 @@ export interface Advertisement {
     title: string;
     discount: string;
 };
+
+export interface productTodays {
+    id: number;
+    nameProduct: string;
+    priceProduct: string;
+    originalPrice: string;
+    star: number;
+    quantityStar: number;
+    discount: string;
+    imgae: string;
+    alt: string;
+};

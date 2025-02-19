@@ -8,12 +8,14 @@ const App = () => {
   const {
     currentPage,
     setCurrentPage,
+    prevRef,
+    nextRef,
   } = useMain();
 
   return (
     <div className='overflow-x-hidden'>
       <Navbar/>
-      <Home currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+      <Home currentPage={currentPage} setCurrentPage={setCurrentPage} prevRef={prevRef} nextRef={nextRef}/>
       
     </div>
   )
