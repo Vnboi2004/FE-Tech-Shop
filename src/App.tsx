@@ -10,12 +10,18 @@ const App = () => {
     setCurrentPage,
     prevRef,
     nextRef,
+    prevRefCategories,
+    nextRefCategories,
   } = useMain();
 
   return (
     <div className='overflow-x-hidden'>
       <Navbar/>
-      <Home currentPage={currentPage} setCurrentPage={setCurrentPage} prevRef={prevRef} nextRef={nextRef}/>
+      <Home 
+        currentPage={currentPage} setCurrentPage={setCurrentPage} 
+        prevRef={prevRef} nextRef={nextRef}
+        prevRefCategories={prevRefCategories} nextRefCategories={nextRefCategories}
+      />
       
     </div>
   )

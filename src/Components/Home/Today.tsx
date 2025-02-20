@@ -106,7 +106,7 @@ const Today: React.FC<TodayProductProps> = ({prevRef, nextRef}) => {
                             <SwiperSlide>
                                 <div>
                                     <div className="bg-gray-100 flex justify-center items-center w-[270px] h-[250px] overflow-hidden rounded-sm relative group">
-                                        <img src={data.imgae} alt={data.alt} className="object-cover group-hover:scale-75 duration-300 transform"/>
+                                        <img src={data.imgae} alt={""} className="object-cover group-hover:scale-75 duration-300 transform"/>
                                         <div className='absolute top-2 right-3 p-1 bg-white rounded-full'>
                                             <CiHeart className='text-xl'/>
                                         </div>

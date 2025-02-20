@@ -39,9 +39,9 @@ const TitleProducts: React.FC<TitleProductsProps> = ({currentPage, setCurrentPag
                         onSlideChange={(swiper) => setCurrentPage(swiper.activeIndex)}
                         spaceBetween={10} 
                         slidesPerView={1} 
-                        pagination={{
-                            clickable: true,
-                        }}
+                        // pagination={{
+                        //     clickable: true,
+                        // }}
                         modules={[Pagination]}
                         className='bg-black'>
                         {advertisementData.map((data) => (

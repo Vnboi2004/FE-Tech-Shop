@@ -26,11 +26,33 @@ export interface productTodays {
     quantityStar: number;
     discount: string;
     imgae: string;
-    alt: string;
+    
 };
 
 export interface Categories {
     id: number;
     icon: IconType;
     name: string;
+};
+
+export interface BestSeleProducts {
+    id: number;
+    image: string;
+    alt: string;
+    name: string;
+    price: string;
+    originalPrice: string;
+    star: number;
+    quantityStar: number;
+};
+
+export interface OurProducts {
+    id: number;
+    image: string;
+    alt: string;
+    name: string;
+    price: string;
+    originalPrice: string;
+    star: number;
+    quantityStar: number;
 };
