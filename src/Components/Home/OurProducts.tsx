@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -8,31 +8,79 @@ import { ourProductsData } from '../../Data/main';
 import { CiHeart } from "react-icons/ci";
 import { IoEyeOutline } from "react-icons/io5";
 import { TiStarFullOutline } from "react-icons/ti";
+import { homeProps } from './Home';
+import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 
-const OurProducts = () => {
+
+interface OurProductsProps extends Pick<homeProps, "prevRefOurProducts" | "nextRefOurProducts"> {};
+
+const OurProducts: React.FC<OurProductsProps> = ({prevRefOurProducts, nextRefOurProducts}) => {
     
+    const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
+
+
     const slides = [];
     for (let i = 0; i < ourProductsData.length; i += 8) {
         slides.push(ourProductsData.slice(i, i + 8));
     }
-    console.log(slides)
 
     return (
         <div className='px-18'>
-            <div>
+            <div className=''>
                 <div className='flex items-center gap-3 pb-6'>
                     <div className='w-4 h-9 bg-[#DB4444] rounded'></div>
                     <h2 className='text-[#DB4444] font-medium'>Our Products</h2>
                 </div>
-                <div className='pb-6'>
+                <div className='pb-6 flex items-center justify-between'>
                     <h1 className='text-4xl font-semibold'>Explore Our Products</h1>
+                    <div className='flex items-center gap-2'>
+                        {/* Left row */}
+                        <button
+                            ref={prevRefOurProducts}
+                            className={`bg-gray-200 text-black p-2 rounded-full z-10 ${isBeginning ? "opacity-50 cursor-not-allowed" : "opacity-100  cursor-pointer"}`}
+                            disabled={isBeginning}
+                        >
+                            <GoArrowLeft/>
+                        </button>
+                        {/* Right row */}
+                        <button
+                            ref={nextRefOurProducts}
+                            className={`bg-gray-200 text-black p-2 rounded-full z-10 ${isEnd ? "opacity-50 cursor-not-allowed" : "opacity-100 cursor-pointer"}`}
+                            disabled={isEnd}
+                        >
+                            <GoArrowRight/>
+                        </button>
+                    </div>
                 </div>
                 <div className='py-8'>
                     <Swiper
                     modules={[Pagination, Navigation]}
                     slidesPerView={1}
                     spaceBetween={10}
+                    navigation={{
+                        prevEl: prevRefOurProducts.current,
+                        nextEl: nextRefOurProducts.current,
+                    }}
                     // pagination={{ clickable: true }}
+                    onSwiper={(swiper) => {
+                        setIsBeginning(swiper.isBeginning);
+                        setIsEnd(swiper.isEnd);
+                        setTimeout(() => {
+                            if (swiper.params.navigation) {
+                                if (typeof swiper.params.navigation !== "boolean") {
+                                    swiper.params.navigation.prevEl = prevRefOurProducts.current;
+                                    swiper.params.navigation.nextEl = nextRefOurProducts.current;
+                                }
+                                swiper.navigation.init();
+                                swiper.navigation.update();
+                            }
+                        })
+                    }}
+                    onSlideChange={(swiper) => {
+                        setIsBeginning(swiper.isBeginning);
+                        setIsEnd(swiper.isEnd);
+                    }}
                     >           
                         {slides.map((slide, index) => (
                             <SwiperSlide key={index}>
@@ -75,6 +123,11 @@ const OurProducts = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                    <div className='flex justify-center py-2'>
+                        <button className='bg-[#DB4444] text-white px-12 py-3 rounded-sm cursor-pointer'>
+                            View All Products
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

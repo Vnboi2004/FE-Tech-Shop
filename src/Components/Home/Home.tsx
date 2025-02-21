@@ -5,6 +5,7 @@ import { RefObject } from "react";
 import Categories from './Categories';
 import ThisMonth from './ThisMonth';
 import OurProducts from './OurProducts';
+import Featured from './Featured';
 export interface homeProps {
     currentPage: number;
     setCurrentPage: (page: number) => void;
@@ -12,8 +13,15 @@ export interface homeProps {
     nextRef: RefObject<HTMLButtonElement>;
     prevRefCategories: RefObject<HTMLButtonElement>;
     nextRefCategories: RefObject<HTMLButtonElement>;
+    prevRefOurProducts: RefObject<HTMLButtonElement>;
+    nextRefOurProducts: RefObject<HTMLButtonElement>;
 }
-const Home: React.FC<homeProps> = ({currentPage, setCurrentPage, prevRef, nextRef, prevRefCategories, nextRefCategories}) => {
+const Home: React.FC<homeProps> = ({
+    currentPage, setCurrentPage, 
+    prevRef, nextRef, 
+    prevRefCategories, nextRefCategories, 
+    prevRefOurProducts, nextRefOurProducts,
+}) => {
 
 
     return (
@@ -27,7 +35,9 @@ const Home: React.FC<homeProps> = ({currentPage, setCurrentPage, prevRef, nextRe
             {/* This month */}
             <ThisMonth/>
             {/* Our product */}
-            <OurProducts/>
+            <OurProducts prevRefOurProducts={prevRefOurProducts} nextRefOurProducts={nextRefOurProducts}/>
+            {/* Featured */}
+            <Featured/>
         </div>
     )
 }

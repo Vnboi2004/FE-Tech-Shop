@@ -1,5 +1,4 @@
 import { useRef, useState } from "react"
-import { advertisementData } from "../Data/main"
 
 export default function useMain() {
 
@@ -13,6 +12,10 @@ export default function useMain() {
     const prevRefCategories =  useRef<HTMLButtonElement | null>(null);
     const nextRefCategories = useRef<HTMLButtonElement | null>(null);
 
+    // OurProducts
+    const prevRefOurProducts = useRef<HTMLButtonElement | null>(null);
+    const nextRefOurProducts = useRef<HTMLButtonElement | null>(null);
+
     return {
         currentPage,
         setCurrentPage,
@@ -20,5 +23,7 @@ export default function useMain() {
         nextRef,
         prevRefCategories,
         nextRefCategories,
+        prevRefOurProducts,
+        nextRefOurProducts,
     };
 };

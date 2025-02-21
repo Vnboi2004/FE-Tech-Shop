@@ -56,3 +56,11 @@ export interface OurProducts {
     star: number;
     quantityStar: number;
 };
+
+export interface Featured {
+    id: number;
+    image: string;
+    alt: string;
+    name: string;
+    discription: string;
+};

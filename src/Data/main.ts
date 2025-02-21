@@ -1,6 +1,6 @@
 import { RiComputerLine } from 'react-icons/ri';
-import { Advertisement, BestSeleProducts, Categories, navbarTypes, OurProducts, productTodays, titleProducts } from "../Types/main";
-import {Images, CategoriesIcon, ThisMonthImage, ourProductsImage} from "./imageData";
+import { Advertisement, BestSeleProducts, Categories, Featured, navbarTypes, OurProducts, productTodays, titleProducts } from "../Types/main";
+import {Images, CategoriesIcon, ThisMonthImage, ourProductsImage, FeaturedImage } from "./imageData";
 
 // Link Navbar
 export const navbarData: navbarTypes[] = [
@@ -209,4 +209,11 @@ export const ourProductsData: OurProducts[] = [
     { id: 14, image: ourProductsImage.product06_today, alt: "", name: "Gucci duffle bag", price: "$960", originalPrice: "$1160", star: 4, quantityStar: 60,},
     { id: 15, image: ourProductsImage.product07_today, alt: "", name: "RGB liquid CPU Cooler", price: "$160", originalPrice: "$170", star: 3, quantityStar: 75,},
     { id: 16, image: ourProductsImage.thisMonth02, alt: "", name: "Small BookSelf", price: "$360", originalPrice: "", star: 2, quantityStar: 10,},
+];
+
+
+export const featuredData: Featured[] = [
+    { id: 1, image: FeaturedImage.Featured05, alt: "", name: "FREE AND FAST DELIVERY", discription: "Free delivery for all orders over $140"},
+    { id: 2, image: FeaturedImage.Featured06, alt: "", name: "24/7 CUSTOMER SERVICE", discription: "Friendly 24/7 customer support"},
+    { id: 3, image: FeaturedImage.Featured07, alt: "", name: "MONEY BACK GUARANTEE", discription: "We reurn money within 30 days"},
 ];

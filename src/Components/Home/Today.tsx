@@ -82,7 +82,7 @@ const Today: React.FC<TodayProductProps> = ({prevRef, nextRef}) => {
                             prevEl: prevRef.current,
                             nextEl: nextRef.current,
                         }}
-                        pagination={{ clickable: true }}
+                        // pagination={{ clickable: true }}
                         onSwiper={(swiper) => {
                             setIsBeginning(swiper.isBeginning);
                             setIsEnd(swiper.isEnd);

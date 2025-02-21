@@ -48,6 +48,16 @@ import ourProduct06 from "../assets/Images/OurProducts06.png";
 import ourProduct07 from "../assets/Images/OurProducts07.png";
 import ourProduct08 from "../assets/Images/OurProducts08.png";
 
+
+import Featured01 from "../assets/Images/Featured01.png";
+import Featured02 from "../assets/Images/Featured02.png";
+import Featured03 from "../assets/Images/Featured03.png";
+import Featured04 from "../assets/Images/Featured04.png";
+import Featured05 from "../assets/Images/Featured05.png";
+import Featured06 from "../assets/Images/Featured06.png";
+import Featured07 from "../assets/Images/Featured07.png";
+
+
 export const Images = { 
     product01_today, 
     product02_today, 
@@ -109,6 +119,19 @@ export const ourProductsImage = {
 
     thisMonth02,
 };
+
+
+export const FeaturedImage = {
+    Featured01,
+    Featured02,
+    Featured03,
+    Featured04,
+    Featured05,
+    Featured06,
+    Featured07,
+};
+
+
 
 
 
