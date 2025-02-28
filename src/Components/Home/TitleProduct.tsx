@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { advertisementData, titleProducts } from '../../Data/main';
 import { FaAngleRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import iphone from '../../assets/Images/iphone.png';
 import { IoArrowForwardOutline } from "react-icons/io5";
 import LogoApple from '../../assets/Images/logo_Apple.png';
@@ -39,10 +39,13 @@ const TitleProducts: React.FC<TitleProductsProps> = ({currentPage, setCurrentPag
                         onSlideChange={(swiper) => setCurrentPage(swiper.activeIndex)}
                         spaceBetween={10} 
                         slidesPerView={1} 
+                        loop={true}
+                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        onSlideChange={(swiper) => setCurrentPage(swiper.realIndex)}
                         // pagination={{
                         //     clickable: true,
                         // }}
-                        modules={[Pagination]}
+                        modules={[Pagination, Autoplay]}
                         className='bg-black'>
                         {advertisementData.map((data) => (
                             <SwiperSlide key={data.id}>

@@ -16,6 +16,10 @@ export default function useMain() {
     const prevRefOurProducts = useRef<HTMLButtonElement | null>(null);
     const nextRefOurProducts = useRef<HTMLButtonElement | null>(null);
 
+
+    // 
+
+
     return {
         currentPage,
         setCurrentPage,
@@ -25,5 +29,6 @@ export default function useMain() {
         nextRefCategories,
         prevRefOurProducts,
         nextRefOurProducts,
+        
     };
 };

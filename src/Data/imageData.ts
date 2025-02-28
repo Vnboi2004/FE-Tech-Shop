@@ -58,6 +58,13 @@ import Featured06 from "../assets/Images/Featured06.png";
 import Featured07 from "../assets/Images/Featured07.png";
 
 
+
+import VectorRow from "../assets/Images/VectorRow.png";
+import AppStore from "../assets/Images/AppStore.png";
+import GooglePlay from "../assets/Images/GooglePlay.png";
+import QRCode from "../assets/Images/Qrcode.png";
+
+
 export const Images = { 
     product01_today, 
     product02_today, 
@@ -129,6 +136,14 @@ export const FeaturedImage = {
     Featured05,
     Featured06,
     Featured07,
+};
+
+
+export const FooterImage = {
+    VectorRow,
+    AppStore,
+    GooglePlay,
+    QRCode,
 };
 
 

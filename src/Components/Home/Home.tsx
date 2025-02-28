@@ -17,27 +17,28 @@ export interface homeProps {
     nextRefOurProducts: RefObject<HTMLButtonElement>;
 }
 const Home: React.FC<homeProps> = ({
-    currentPage, setCurrentPage, 
-    prevRef, nextRef, 
-    prevRefCategories, nextRefCategories, 
+    currentPage, setCurrentPage,
+    prevRef, nextRef,
+    prevRefCategories, nextRefCategories,
     prevRefOurProducts, nextRefOurProducts,
+
 }) => {
 
 
     return (
         <div>
             {/* Components title product website */}
-            <TitleProducts currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+            <TitleProducts currentPage={currentPage} setCurrentPage={setCurrentPage} />
             {/* Today's */}
-            <Today prevRef={prevRef} nextRef={nextRef}/>
+            <Today prevRef={prevRef} nextRef={nextRef} />
             {/* Categories */}
-            <Categories prevRefCategories={prevRefCategories} nextRefCategories={nextRefCategories}/>
+            <Categories prevRefCategories={prevRefCategories} nextRefCategories={nextRefCategories} />
             {/* This month */}
-            <ThisMonth/>
+            <ThisMonth />
             {/* Our product */}
-            <OurProducts prevRefOurProducts={prevRefOurProducts} nextRefOurProducts={nextRefOurProducts}/>
+            <OurProducts prevRefOurProducts={prevRefOurProducts} nextRefOurProducts={nextRefOurProducts} />
             {/* Featured */}
-            <Featured/>
+            <Featured />
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import useMain from './Hooks/main';
+import Footer from './Components/Footer/Footer';
 
 const App = () => {
 
@@ -25,7 +26,7 @@ const App = () => {
         prevRefCategories={prevRefCategories} nextRefCategories={nextRefCategories}
         prevRefOurProducts={prevRefOurProducts} nextRefOurProducts={nextRefOurProducts}
       />
-      
+      <Footer/>
     </div>
   )
 }
